@@ -7,7 +7,7 @@
   outline: 0;
   box-sizing: border-box;
   font-weight: 500;
-  color: #b3b3af;
+  color: #fff;
 }
 
 html,
@@ -53,8 +53,15 @@ body {
   background-color: #000;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1;
   color: #fff;
+}
+
+:root {
+  --gray-filter: invert(75%) sepia(0%) saturate(0%) hue-rotate(173deg)
+    brightness(93%) contrast(97%);
+  --white-filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(236deg)
+    brightness(106%) contrast(101%);
 }
 
 .wrapper {
@@ -80,8 +87,8 @@ body {
 }
 
 .logo:hover {
-  filter: grayscale(52%) sepia(28%) brightness(129%) hue-rotate(152deg)
-    invert(8%);
+  transition: 0.3s;
+  filter: var(--gray-filter);
 }
 
 .nav-list {
@@ -91,19 +98,20 @@ body {
 
 .nav-item {
   position: relative;
-  color: #b3b3af;
+  color: #fff;
   cursor: pointer;
   font-weight: 500;
 }
 
 .nav-item:hover {
-  color: #fff;
+  transition: 0.3s;
+  color: #b3b3af;
 }
 
 .nav-item::after {
   content: "";
   position: absolute;
-  background-color: #b6b6b6;
+  background-color: #b3b3af;
   height: 2px;
   width: 0;
   left: 0;
@@ -132,14 +140,44 @@ main {
   background-image: url("../assets/svg/play-svgrepo-com.svg");
   background-color: transparent;
   cursor: pointer;
-  filter: invert(17%) sepia(5%) saturate(4%) hue-rotate(346deg) brightness(98%)
-    contrast(103%);
-}
-
-.play:hover {
-  transition: 0.3s;
   filter: invert(74%) sepia(0%) saturate(3052%) hue-rotate(176deg)
     brightness(96%) contrast(96%);
 }
 
+.play:hover {
+  transition: 0.3s;
+  filter: invert(17%) sepia(5%) saturate(4%) hue-rotate(346deg) brightness(98%)
+    contrast(103%);
+}
 
+.footer__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80px;
+}
+
+.rss-logo {
+  width: 135px;
+  height: 50px;
+  background-image: url("../assets/svg/rs_school_js.svg");
+  filter: var(--white-filter);
+  background-repeat: no-repeat;
+}
+
+.rss-logo:hover {
+  transition: 0.3s;
+  filter: var(--gray-filter);
+}
+
+.footer-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.github-username:hover {
+  transition: 0.3s;
+  color: #b3b3af;
+}
