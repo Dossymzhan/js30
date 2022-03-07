@@ -1,2 +1,2 @@
-# js30
-RS School applications to train JS
+# LP SONGS
+https://dossymzhan.github.io/js30/lp-sounds
