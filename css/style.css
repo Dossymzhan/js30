@@ -82,6 +82,7 @@ body {
   width: 60px;
   height: 60px;
   background-image: url("../assets/lp-icon2.png");
+  background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
@@ -121,6 +122,20 @@ body {
 
 .nav-item:hover::after {
   width: 100%;
+}
+
+.active {
+  transition: 0.3s;
+  color: #b3b3af;
+}
+
+.active::after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  background-color: #b3b3af;
+  height: 2px;
+  bottom: -5px;
 }
 
 main {

@@ -1,5 +1,6 @@
 const playBtn = document.querySelector(".play");
 const songs = document.querySelectorAll(".nav-item");
+const main = document.querySelector(".main");
 
 const audio = new Audio();
 audio.src = `./assets/songs/one-more-light.mp3`;
@@ -28,7 +29,7 @@ playBtn.addEventListener("click", () => {
 });
 
 function changeImage(e) {
-  main.style.backgroundImage = url(`./assets/img/${e.target.dataset.item}.jpg`);
+  main.style.backgroundImage = `url('./assets/img/${e.target.dataset.item}.jpg')`;
 }
 
 function changeSong(e) {
@@ -36,6 +37,15 @@ function changeSong(e) {
   playAudio();
 }
 
+function active(e) {
+  songs.forEach((song) => {
+    song.classList.remove("active");
+  });
+  e.target.classList.add("active");
+}
+
 songs.forEach((song) => {
   song.addEventListener("click", changeSong);
+  song.addEventListener("click", changeImage);
+  song.addEventListener("click", active);
 });
