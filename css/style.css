@@ -150,6 +150,10 @@ main {
     contrast(103%);
 }
 
+.pause {
+  background-image: url("../assets/svg/pause-svgrepo-com.svg");
+}
+
 .footer__container {
   display: flex;
   justify-content: space-evenly;
