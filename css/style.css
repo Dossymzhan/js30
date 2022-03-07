@@ -200,3 +200,59 @@ main {
   transition: 0.3s;
   color: #b3b3af;
 }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+
+  .nav-list {
+    gap: 15px;
+  }
+
+  .play {
+    width: 70px;
+    height: 70px;
+    filter: none;
+  }
+
+  .active {
+    color: #000;
+  }
+
+  .nav-item:hover {
+    color: #000;
+  }
+
+  .active::after {
+    background-color: #000;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 35%;
+    background-color: #b3b3af;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .rss-logo {
+    width: 90px;
+    height: 40px;
+  }
+
+  .footer__container {
+    gap: 10px;
+  }
+}
