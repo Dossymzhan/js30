@@ -1,2 +1,2 @@
 # LP SONGS
-https://dossymzhan.github.io/js30/lp-sounds
+https://dossymzhan.github.io/js30/
